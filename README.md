@@ -1,9 +1,9 @@
-# Cheese MVC Persistent
+# Cheese Menu
 
 A web application for creating and managing cheese menus. Read below for
 an image based demonstration of the application.
 
-*This application was for an assignment at LaunchCode's Lc101 2018*
+_This application was for an assignment at LaunchCode's Lc101 2018_
 
 ## Table of contents
 
