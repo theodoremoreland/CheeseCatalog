@@ -46,10 +46,16 @@ bundle config set path 'vendor/bundle'
 bundle install
 ```
 
-Then to start server
+This will run a setup script for installing gems, setting up the database, setting up the environment(s), and start the server.
 
 ```bash
  bin/setup
+```
+
+Start the server, specifically
+
+```bash
+bin/rails server
 ```
 
 ## Screenshots
