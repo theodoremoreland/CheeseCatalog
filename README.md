@@ -1,4 +1,4 @@
-# Cheese Menu
+# Cheeses
 
 A web application for creating and managing cheese menus. Read below for
 an image based demonstration of the application.
@@ -44,6 +44,12 @@ So use the following instead:
 ```bash
 bundle config set path 'vendor/bundle'
 bundle install
+```
+
+Then to start server
+
+```bash
+ bin/setup
 ```
 
 ## Screenshots
