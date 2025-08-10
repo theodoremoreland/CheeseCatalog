@@ -9,8 +9,15 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+ /* ___________________ FONTS ____________________________ */
+
+@font-face {
+    font-family: custom;
+    src: url('../fonts/MouldyCheese.ttf');
+}
+
  body {
-    font-family: sans-serif;
+    font-family: custom, sans-serif;
 }
 
 nav {
