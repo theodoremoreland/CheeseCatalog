@@ -2,7 +2,7 @@
 
 A web application managing a catalog of cheeses.
 
-_This application was for an assignment at LaunchCode's Lc101 2018 (originally named Cheese MVC Persistent)_
+_This application was for an assignment at LaunchCode's Lc101 2018 (originally named Cheese MVC Persistent)._
 
 ## Table of contents
 
