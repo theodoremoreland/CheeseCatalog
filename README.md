@@ -1,9 +1,8 @@
-# Cheeses
+# Cheese Catalog
 
-A web application for creating and managing cheese menus. Read below for
-an image based demonstration of the application.
+A web application managing a catalog of cheeses.
 
-_This application was for an assignment at LaunchCode's Lc101 2018_
+_This application was for an assignment at LaunchCode's Lc101 2018 (originally named Cheese MVC Persistent)_
 
 ## Table of contents
 
@@ -11,6 +10,7 @@ _This application was for an assignment at LaunchCode's Lc101 2018_
 - [How to run locally](#how-to-run-locally)
   - [Ubuntu](#ubuntu)
 - [Screenshots](#screenshots)
+- [Note to self](#note-to-self)
 
 ## Technologies
 
@@ -58,4 +58,10 @@ Start the server, specifically
 bin/rails server
 ```
 
+[Visit http://127.0.0.1:3000](http://127.0.0.1:3000)
+
 ## Screenshots
+
+## Note to self
+
+The folder structure of this repository is not ideal in that all of the application specific folders and files (including things like databases, configs, package data, etc) are at the root of the repository alongside other files and folders non essential to the software. Normally, I would place all application specific code in a subfolder such as `src` or `application`, but all of the Ruby and Rails tooling thus far assume said files are located at the root. For example, the `.gitignore`, `.github`, the `Ruby LSP` VS code extension, etc. I tried structuring things my own way, but found it wasn't worth the trouble. So for the time being everything is more-or-less at the root of this repo.
