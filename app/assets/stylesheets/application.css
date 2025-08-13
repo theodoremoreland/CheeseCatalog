@@ -25,23 +25,46 @@
 }
 
 html {
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  min-height: 400px;
+  overflow-x: hidden;
   background-color: rgb(194, 0, 0);
-  background-image: linear-gradient(45deg, #d53333 0%, rgb(194, 0, 0) 100%);
+  background-image: radial-gradient(circle at top left, #9b0000 0%, rgb(194, 0, 0) 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-body,
-main {
+body {
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: custom, sans-serif;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 4rem);
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 #landing-page {
@@ -60,46 +83,34 @@ main {
   height: 70%;
 }
 
-h1 {
+#title-name {
   color: white;
   text-align: center;
-  font-size: 4em;
+  font-size: 4rem;
   font-style: oblique;
+  letter-spacing: -1px;
 }
 
-p {
+#title-description {
   width: 100%;
   max-width: 75ch;
   color: white;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 button {
-  background-color: #f3dd12;
+  background-color: #feef9b;
   color: black;
   min-width: 200px;
   padding: 10px 19px;
   border: 1px solid black;
-  border-radius: 6px;
+  border-radius: 20px;
   font-family: custom;
   cursor: pointer;
 
   &:hover {
     filter: brightness(1.2);
   }
-}
-
-
-footer {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 4em;
-  padding: 10px 0;
-  font-size: 0.8em;
-  font-style: italic;
 }
