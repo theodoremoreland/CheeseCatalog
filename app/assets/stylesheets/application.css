@@ -120,12 +120,12 @@ footer {
 }
 
 #cheese-backdrop {
-  height: 45%;
+  height: 40%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   #cheese-backdrop {
-    height: 70%;
+    height: 65%;
   }
 }
 
@@ -137,7 +137,7 @@ footer {
   letter-spacing: -1px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   #title-name {
     font-size: 3rem;
   }
@@ -152,7 +152,7 @@ footer {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   #title-description {
     font-size: 1.25rem;
   }
