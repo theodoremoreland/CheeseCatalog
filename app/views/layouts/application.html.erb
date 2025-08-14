@@ -16,6 +16,14 @@
   </head>
 
   <body>
+    <nav id="app-nav">
+      <img id="logo" src="<%= asset_path 'logo.png' %>" alt="Cheese Catalog Logo">
+      <ul>
+        <li><%= link_to "Cheeses", cheeses_path %></li>
+        <li><%= link_to "Categories", categories_path %></li>
+        <li><%= link_to "Menus", menus_path %></li>
+      </ul>
+    </nav>
     <main>
       <%= yield %>
     </main>
