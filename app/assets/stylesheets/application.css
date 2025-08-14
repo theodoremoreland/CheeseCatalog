@@ -120,15 +120,27 @@ footer {
 }
 
 #cheese-backdrop {
-  height: 70%;
+  height: 45%;
+}
+
+@media screen and (max-width: 768px) {
+  #cheese-backdrop {
+    height: 70%;
+  }
 }
 
 #title-name {
   color: white;
   text-align: center;
-  font-size: 4rem;
+  font-size: 2rem;
   font-style: oblique;
   letter-spacing: -1px;
+}
+
+@media screen and (max-width: 768px) {
+  #title-name {
+    font-size: 3rem;
+  }
 }
 
 #title-description {
@@ -136,8 +148,14 @@ footer {
   max-width: 75ch;
   color: white;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  #title-description {
+    font-size: 1.25rem;
+  }
 }
 
 button {
@@ -147,7 +165,7 @@ button {
   min-width: 200px;
   padding: 10px 16px;
   border-radius: 6px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: custom;
   cursor: pointer;
   transition: all 0.3s ease;
