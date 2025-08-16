@@ -3,7 +3,7 @@ class Menu < ApplicationRecord
   has_and_belongs_to_many :cheeses
 
   # Validations
-  validates :name, presence: true, length: { minimum: 3, maximum: 15 }
+  validates :name, presence: true, length: { minimum: 3, maximum: 25 }
 
   # Custom method (equivalent to addItem in Java)
   def add_item(cheese)

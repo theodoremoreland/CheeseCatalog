@@ -4,6 +4,6 @@ class Cheese < ApplicationRecord
   has_and_belongs_to_many :menus
 
   # Validations
-  validates :name, presence: true, length: { minimum: 3, maximum: 15 }
-  validates :description, presence: { message: "must not be empty" }, length: { minimum: 1 }
+  validates :name, presence: true, length: { minimum: 3, maximum: 25 }
+  validates :description, presence: { message: "cheese must have a description" }, length: { minimum: 1 }
 end
