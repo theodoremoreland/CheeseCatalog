@@ -20,6 +20,7 @@ _This application was for an assignment at LaunchCode's Lc101 2018 (originally n
 - Tailwind CSS
 - HTML
 - CSS
+- Copilot (Images)
 
 ## How to run locally
 
