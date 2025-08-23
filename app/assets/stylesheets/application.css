@@ -352,10 +352,6 @@ button {
   min-height: calc(100% - 4rem);
   height: 100%;
   padding: 1% 0 5% 0;
-  background-image: url("/fawn.webp");
-  background-repeat: no-repeat;
-  background-position: 99% 9%;
-  background-attachment: fixed;
 
     h1 {
     width: 75%;
