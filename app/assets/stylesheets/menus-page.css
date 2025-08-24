@@ -81,6 +81,7 @@
       justify-content: center;
       align-items: center;
       width: 100%;
+      padding: 15px 0 7px 0;
       font-size: 2rem;
       font-weight: bold;
       border-top-right-radius: 6px;
@@ -95,12 +96,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
 
     font-size: 1.5rem;
     font-style: italic;
-    padding: 20px;
+    padding-bottom: 15px;
 
     .menu-item {
       border-bottom: 7px dotted white;

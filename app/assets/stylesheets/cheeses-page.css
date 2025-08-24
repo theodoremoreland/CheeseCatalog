@@ -85,4 +85,12 @@
       aspect-ratio: 1 / 1;
     }
   }
+
+  .cheese-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
 }
