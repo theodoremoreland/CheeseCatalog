@@ -4,6 +4,8 @@ A web application managing a catalog of cheeses.
 
 _This application was for an assignment at LaunchCode's Lc101 2018 (originally named Cheese MVC Persistent)._
 
+<img src="presentation/thumbnail.webp" width="700">
+
 ## Table of contents
 
 - [Technologies](#technologies)
@@ -47,13 +49,13 @@ bundle config set path 'vendor/bundle'
 bundle install
 ```
 
-This will run a setup script for installing gems, setting up the database, setting up the environment(s), and start the server.
+This will run a setup script for installing gems, setting up the database, setting up the environment(s), and start the server with hot reload.
 
 ```bash
  bin/setup
 ```
 
-Start the server, specifically
+Start the server, specifically (no hot reload)
 
 ```bash
 bin/rails server
