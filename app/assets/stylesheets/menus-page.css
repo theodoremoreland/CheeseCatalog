@@ -1,0 +1,109 @@
+#menus-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  min-height: calc(100% - 4rem);
+  height: 100%;
+  padding: 1% 0 5% 0;
+  background-image: url("/eating.webp");
+  background-repeat: no-repeat;
+  background-position: 99% 9%;
+  background-attachment: fixed;
+
+  h1 {
+    width: 75%;
+    color: white;
+    text-align: left;
+    font-size: 4.1rem;
+    font-style: oblique;
+    letter-spacing: -1px;
+  }
+
+  #menu-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 75%;
+
+    @media screen and (min-width: 1280px) {
+      & {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media screen and (min-width: 1920px) {
+      & {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+
+  .menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    color: white;
+    background-color: #b00c;
+    border: 2px dashed rgba(0, 0, 0, 0.788);
+    border-radius: 6px;
+
+    &.add-menu-item {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("/blue-cheese-texture.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      mix-blend-mode: color-burn;
+      z-index: -1;
+    }
+
+    .menu-title {
+      box-sizing: content-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: bold;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+      border-bottom: 2px dashed rgb(0, 0, 0);
+    }
+  }
+
+  .menu-items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 20px;
+
+    .menu-item {
+      border-bottom: 7px dotted white;
+    }
+  }
+}

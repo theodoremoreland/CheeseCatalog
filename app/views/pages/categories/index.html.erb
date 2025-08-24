@@ -1,3 +1,7 @@
+<% content_for :page_stylesheet do %>
+  <%= stylesheet_link_tag "categories-page", media: "all" %>
+<% end %>
+
 <div id="categories-page">
     <h1>Categories</h1>
     <ul id="categories-list">
@@ -28,10 +32,6 @@
         <li class="category">
             <h2 class="category-title">Semi-Hard</h2>
             <p class="category-description">Semi-Hard cheese is a cheese that has a firmer texture than semi-soft cheese, but is not as hard as aged cheese. Examples include Gouda and Edam.</p>
-        </li>
-        <li class="category">
-            <h2 class="category-title">Soft-Ripened</h2>
-            <p class="category-description">Soft-Ripened cheese is a cheese that has been aged for a short period of time, resulting in a soft and creamy texture. Examples include Brie and Camembert.</p>
         </li>
     </ul>
 </div>

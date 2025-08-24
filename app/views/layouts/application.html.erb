@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <title><%= content_for(:title) || "Cheese Catalog" %></title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="A delightful catalog of cheeses from around the world">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,6 +15,9 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+
+    <%# Includes page-specific stylesheet if provided %>
+    <%= yield :page_stylesheet %>
   </head>
 
   <body>

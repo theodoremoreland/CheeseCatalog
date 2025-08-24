@@ -1,0 +1,58 @@
+#landing-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: calc(100% - 4rem);
+  padding-top: 1%;
+
+  #cheese-backdrop {
+    pointer-events: none;
+    height: 40%;
+  }
+
+  @media screen and (min-width: 768px) {
+    #cheese-backdrop {
+      height: 65%;
+      margin-top: -40px;
+    }
+  }
+
+  #title-name {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-style: oblique;
+    letter-spacing: -1px;
+  }
+
+  @media screen and (min-width: 768px) {
+    #title-name {
+      font-size: 4.1rem;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #title-name {
+      font-size: 6rem;
+    }
+  }
+
+  #title-description {
+    width: 100%;
+    max-width: 75ch;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: 768px) {
+    #title-description {
+      font-size: 1.25rem;
+    }
+  }
+}
