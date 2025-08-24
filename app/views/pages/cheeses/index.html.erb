@@ -1,0 +1,22 @@
+<div id="cheeses-page">
+  <h1>Cheeses</h1>
+    <ul>
+        <li class="cheese-item add-cheese-item">
+            <button type="button">
+                Add Cheese
+            </button>
+        </li>
+        <% @cheeses.each do |cheese| %>
+            <li class="cheese-item">
+                <img class="cheese-image"
+                    src="<%= asset_path "#{cheese.name.parameterize}.webp" %>"
+                    onerror="this.onerror=null;this.src='<%= asset_path 'collection.webp' %>';" />
+                <div class="cheese-details">
+                    <h2><%= cheese.name %></h2>
+                    <p><%= cheese.description %></p>
+                    <span class="cheese-type"><%= cheese.category %></span>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+</div>

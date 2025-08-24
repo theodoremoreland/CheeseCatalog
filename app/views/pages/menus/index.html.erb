@@ -1,0 +1,20 @@
+<div id="menus-page">
+  <h1>Menus</h1>
+  <ul id="menu-list">
+    <li class="menu add-menu-item">
+      <button type="button">
+        Add Menu
+      </button>
+    </li>
+    <% @menus.each do |menu| %>
+      <li class="menu">
+        <h2 class="menu-title"><%= menu.name %></h2>
+        <ul class="menu-items">
+          <% menu.cheeses.each do |cheese| %>
+            <li class="menu-item"><%= cheese.name %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</div>

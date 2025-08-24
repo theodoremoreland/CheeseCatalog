@@ -1,60 +1,68 @@
-# Cheese MVC Persistent (deprecated)
-A web application for creating and managing cheese menus. Read below for
-an image based demonstration of the application.
+# Cheese Catalog
 
-*This application was for an assignment at LaunchCode's Lc101 2018*
+A web application managing a catalog of cheeses.
+
+_This application was for an assignment at LaunchCode's Lc101 2018 (originally named Cheese MVC Persistent)._
+
+## Table of contents
+
+- [Technologies](#technologies)
+- [How to run locally](#how-to-run-locally)
+  - [Ubuntu](#ubuntu)
+- [Screenshots](#screenshots)
+- [Note to self](#note-to-self)
 
 ## Technologies
-* Java
-* Spring-Boot
-* MySQL
-* Thymeleaf
-* HTML
-* CSS
 
-# Demonstration
+- Ruby
+- Ruby on Rails
+- Embedded Ruby (ERB)
+- Tailwind CSS
+- HTML
+- CSS
+- Copilot (Images)
 
-## Home screen (before adding data)
-<img src="presentation/1.PNG" width="600">
+## How to run locally
 
-## Categories page (before adding data)
-<img src="presentation/2.PNG" width="600">
+### Ubuntu
 
-## Menus page (before adding data)
-<img src="presentation/3.PNG" width="600">
+Assumes Ruby is installed and you are located in the `src` folder of this project.
 
-## Form for adding category
-<img src="presentation/4.PNG" width="600">
+Old way (i.e. DEPRECATED)
 
-## After adding first category
-<img src="presentation/5.PNG" width="600">
+```bash
+bundle install --path vendor/bundle
+```
 
-## After adding numerous categories
-<img src="presentation/6.PNG" width="600">
+You'd get the following:
 
-## Add menu form
-<img src="presentation/8.PNG" width="600">
+```bash
+[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path 'vendor/bundle'`, and stop using this flag
+```
 
-## After creating new menu (Breakfast w/o associated cheese(s))
-<img src="presentation/9.PNG" width="600">
+So use the following instead:
 
-## Menus page (after creating multiple menus)
-<img src="presentation/7.PNG" width="600">
+```bash
+bundle config set path 'vendor/bundle'
+bundle install
+```
 
-## Add cheese form
-<img src="presentation/10.PNG" width="600">
+This will run a setup script for installing gems, setting up the database, setting up the environment(s), and start the server.
 
-## Home screen after adding first cheese
-<img src="presentation/11.PNG" width="600">
+```bash
+ bin/setup
+```
 
-## Home screen after adding multiple cheeses
-<img src="presentation/12.PNG" width="600">
+Start the server, specifically
 
-## Form for adding cheese to menu (Dessert menu)
-<img src="presentation/13.PNG" width="600">
+```bash
+bin/rails server
+```
 
-## After adding numerous cheeses to dessert menu
-<img src="presentation/14.PNG" width="600">
+[Visit http://127.0.0.1:3000](http://127.0.0.1:3000)
 
-## Form for deleting cheeses from database (functionality not yet implemented)
-<img src="presentation/15.PNG" width="600">
+## Screenshots
+
+## Note to self
+
+The folder structure of this repository is not ideal in that all of the application specific folders and files (including things like databases, configs, package data, etc) are at the root of the repository alongside other files and folders non essential to the software. Normally, I would place all application specific code in a subfolder such as `src` or `application`, but all of the Ruby and Rails tooling thus far assume said files are located at the root. For example, the `.gitignore`, `.github`, the `Ruby LSP` VS code extension, etc. I tried structuring things my own way, but found it wasn't worth the trouble. So for the time being everything is more-or-less at the root of this repo.

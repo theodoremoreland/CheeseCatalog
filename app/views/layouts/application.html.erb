@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= content_for(:title) || "Cheese Catalog" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="A delightful catalog of cheeses from around the world">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <nav id="app-nav">
+      <a id="logo-link" href="/">
+        <img id="logo" src="/favicon.png" alt="Cheese Catalog Logo">
+      </a>
+      <ul>
+        <li><%= link_to "Cheeses", cheeses_path %></li>
+        <img class="bullet" src="<%= asset_path 'bullet.webp' %>" alt="bullet">
+        <li><%= link_to "Categories", categories_path %></li>
+        <img class="bullet" src="<%= asset_path 'bullet.webp' %>" alt="bullet">
+        <li><%= link_to "Menus", menus_path %></li>
+      </ul>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>
