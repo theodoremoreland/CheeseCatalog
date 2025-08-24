@@ -19,7 +19,6 @@ _This application was for an assignment at LaunchCode's Lc101 2018 (originally n
 - Ruby
 - Ruby on Rails
 - Embedded Ruby (ERB)
-- Tailwind CSS
 - HTML
 - CSS
 - Copilot (Images)
