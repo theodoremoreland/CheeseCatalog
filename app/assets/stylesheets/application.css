@@ -90,6 +90,12 @@ main {
   min-height: calc(100% - 4rem);
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 button {
   background-color: #fffb00;
   color: rgb(186, 0, 0);
