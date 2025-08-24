@@ -1,6 +1,6 @@
 # Cheese Catalog
 
-A web application managing a catalog of cheeses.
+A web application for managing a catalog of cheeses.
 
 _This application was for an assignment at LaunchCode's Lc101 2018 (originally named Cheese MVC Persistent)._
 
