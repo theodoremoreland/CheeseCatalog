@@ -1,6 +1,11 @@
 <div id="menus-page">
   <h1>Menus</h1>
   <ul id="menu-list">
+    <li class="menu add-menu-item">
+      <button type="button">
+        Add Menu
+      </button>
+    </li>
     <% @menus.each do |menu| %>
       <li class="menu">
         <h2 class="menu-title"><%= menu.name %></h2>

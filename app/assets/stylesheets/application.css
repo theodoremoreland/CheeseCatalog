@@ -222,17 +222,16 @@ button {
     gap: 10px;
     width: 100%;
     padding: 12px;
-    background-color: rgba(
-      174,
-      0,
-      0,
-      0.3
-    );
+    background-color: rgba(174, 0, 0, 0.3);
     backdrop-filter: blur(
       9px
     ); /* Apply blur to the background behind the element */
     border: 2px dashed rgba(0, 0, 0, 0.788);
     border-radius: 6px;
+
+    &.add-cheese-item {
+      justify-content: center;
+    }
 
     h2 {
       color: white;
@@ -316,14 +315,19 @@ button {
     border: 2px dashed rgba(0, 0, 0, 0.788);
     border-radius: 6px;
 
+    &.add-menu-item {
+      justify-content: center;
+      align-items: center;
+    }
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url('/blue-cheese-texture.webp');
+      background-image: url("/blue-cheese-texture.webp");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -364,7 +368,6 @@ button {
   }
 }
 
-
 #categories-page {
   position: relative;
   display: flex;
@@ -377,7 +380,7 @@ button {
   height: 100%;
   padding: 1% 0 5% 0;
 
-    h1 {
+  h1 {
     width: 75%;
     color: white;
     text-align: left;
