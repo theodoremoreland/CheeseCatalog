@@ -1,6 +1,6 @@
 class CheesesController < ApplicationController
   def index
-    @cheeses = Cheese.all
+    @cheeses = Cheese.order(:name).all
     render "pages/cheeses/index"
   end
 end
