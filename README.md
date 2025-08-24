@@ -9,6 +9,7 @@ _This application was for an assignment at LaunchCode's Lc101 2018 (originally n
 ## Table of contents
 
 - [Technologies](#technologies)
+- [Overview](#overview)
 - [How to run locally](#how-to-run-locally)
   - [Ubuntu](#ubuntu)
 - [Screenshots](#screenshots)
@@ -22,6 +23,10 @@ _This application was for an assignment at LaunchCode's Lc101 2018 (originally n
 - HTML
 - CSS
 - Copilot (Images)
+
+## Overview
+
+This application was originally an optional CRUD exercise for LaunchCode's LC101 (2018). It was originally built using Java, Spring Boot, Thymeleaf, and MySQL. The end result was an app that allowed users to create, edit, and delete cheese items, cheese categories, and cheese menus. I have since then rewrote the application to learn Ruby and Ruby on Rails. Currently, I managed to redesign the UI and implement some foundations in Ruby and Ruby on Rails, which I consider sufficient for the purposes of learning.
 
 ## How to run locally
 
@@ -49,6 +54,20 @@ bin/rails server
 [Visit http://127.0.0.1:3000](http://127.0.0.1:3000)
 
 ## Screenshots
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/cheese-catalog/1.png" width="700">
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/cheese-catalog/2.png" width="700">
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/cheese-catalog/3.png" width="700">
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/cheese-catalog/4.png" width="700">
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/cheese-catalog/5.png" width="700">
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/cheese-catalog/6.png" width="700">
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/cheese-catalog/7.png" width="700">
 
 ## Note to self
 
