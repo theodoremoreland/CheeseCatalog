@@ -4,6 +4,8 @@ class MenusController < ApplicationController
                 .includes(:cheeses)
                 .distinct
                 .order(:name)
+    @cheeses = Cheese.all
+
     render "pages/menus/index"
   end
 end

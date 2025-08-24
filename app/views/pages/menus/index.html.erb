@@ -2,12 +2,14 @@
   <%= stylesheet_link_tag "menus-page", media: "all" %>
 <% end %>
 
+<%= javascript_include_tag "addMenuModal" %>
+
 <div id="menus-page">
   <h1>Menus</h1>
   <ul id="menu-list">
     <li class="menu add-menu-item">
-      <button type="button">
-        Add Menu
+      <button type="button" id="open-modal">
+        Create new menu
       </button>
     </li>
     <% @menus.each do |menu| %>
@@ -21,4 +23,26 @@
       </li>
     <% end %>
   </ul>
+
+    <div id="add-menu-modal-backdrop" class="modal-backdrop">
+        <div class="modal">
+            <span id="close-modal" class="close-modal">&times;</span>
+            <h2>Create New Menu</h2>
+            <form id="add-menu-form">
+                <div class="form-group">
+                    <label for="menu-name">Name</label>
+                    <input type="text" id="menu-name" name="menu[name]" required>
+                </div>
+                <div class="form-group">
+                    <label for="cheeses">Cheeses</label>
+                    <select id="menu-cheeses" name="menu[cheeses][]" multiple required>
+                        <% @cheeses.each do |cheese| %>
+                            <option value="<%= cheese.id %>"><%= cheese.name %></option>
+                        <% end %>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>

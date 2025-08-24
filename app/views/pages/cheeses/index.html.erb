@@ -2,12 +2,14 @@
   <%= stylesheet_link_tag "cheeses-page", media: "all" %>
 <% end %>
 
+<%= javascript_include_tag "addCheeseModal" %>
+
 <div id="cheeses-page">
   <h1>Cheeses</h1>
     <ul>
         <li class="cheese-item add-cheese-item">
-            <button type="button">
-                Add Cheese
+            <button type="button" id="open-modal">
+                Add cheese
             </button>
         </li>
         <% @cheeses.each do |cheese| %>
@@ -23,4 +25,34 @@
             </li>
         <% end %>
     </ul>
+
+    <div id="add-cheese-modal-backdrop" class="modal-backdrop">
+        <div class="modal">
+            <span id="close-modal" class="close-modal">&times;</span>
+            <h2>Add Cheese</h2>
+            <form id="add-cheese-form">
+                <div class="form-group">
+                    <label for="cheese-name">Name</label>
+                    <input type="text" id="cheese-name" name="cheese[name]" required>
+                </div>
+                <div class="form-group">
+                    <label for="cheese-description">Description</label>
+                    <textarea id="cheese-description" name="cheese[description]" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cheese-category">Category</label>
+                    <select id="cheese-category" name="cheese[category]" required>
+                            <option value="soft">Soft</option>
+                            <option value="hard">Hard</option>
+                            <option value="blue">Blue</option>
+                            <option value="processed">Processed</option>
+                            <option value="fresh">Fresh</option>
+                            <option value="semi-soft">Semi-Soft</option>
+                            <option value="semi-hard">Semi-Hard</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
