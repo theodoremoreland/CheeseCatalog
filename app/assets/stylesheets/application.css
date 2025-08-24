@@ -275,9 +275,21 @@ button {
   #menu-list {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     width: 75%;
+
+    @media screen and (min-width: 1280px) {
+      & {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media screen and (min-width: 1920px) {
+      & {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
   }
 
   .menu {

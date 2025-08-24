@@ -1,71 +1,15 @@
 <div id="menus-page">
   <h1>Menus</h1>
   <ul id="menu-list">
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-        <li class="menu-item">Brie</li>
-      </ul>
-    </li>
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-        <li class="menu-item">Brie</li>
-      </ul>
-    </li>
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-        <li class="menu-item">Brie</li>
-        <li class="menu-item">Cheddar</li>
-      </ul>
-    </li>
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-        <li class="menu-item">Brie</li>
-      </ul>
-    </li>
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-        <li class="menu-item">Brie</li>
-      </ul>
-    </li>
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-        <li class="menu-item">Brie</li>
-        <li class="menu-item">Cheddar</li>
-        <li class="menu-item">Swiss</li>
-      </ul>
-    </li>
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-        <li class="menu-item">Brie</li>
-      </ul>
-    </li>
-    <li class="menu">
-      <h2 class="menu-title">Lunch Menu</h2>
-      <ul class="menu-items">
-        <li class="menu-item">Gouda</li>
-        <li class="menu-item">Parmesan</li>
-      </ul>
-    </li>
+    <% @menus.each do |menu| %>
+      <li class="menu">
+        <h2 class="menu-title"><%= menu.name %></h2>
+        <ul class="menu-items">
+          <% menu.cheeses.each do |cheese| %>
+            <li class="menu-item"><%= cheese.name %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
   </ul>
 </div>
