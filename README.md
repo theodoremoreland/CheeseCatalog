@@ -29,20 +29,6 @@ _This application was for an assignment at LaunchCode's Lc101 2018 (originally n
 
 Assumes Ruby is installed and you are located in the `src` folder of this project.
 
-Old way (i.e. DEPRECATED)
-
-```bash
-bundle install --path vendor/bundle
-```
-
-You'd get the following:
-
-```bash
-[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path 'vendor/bundle'`, and stop using this flag
-```
-
-So use the following instead:
-
 ```bash
 bundle config set path 'vendor/bundle'
 bundle install
