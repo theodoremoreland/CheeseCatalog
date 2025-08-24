@@ -1,101 +1,15 @@
 <div id="cheeses-page">
   <h1>Cheeses</h1>
-  <ul>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'american.webp' %>" />
-        <div class="cheese-details">
-            <h2>American</h2>
-            <p>A mild, creamy processed cheese often used in sandwiches and burgers.</p>
-            <span class="cheese-type">Processed</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'asiago.webp' %>" />
-        <div class="cheese-details">
-            <h2>Asiago</h2>
-            <p>An Italian cow's milk cheese with a sharp, nutty flavor, great for grating.</p>
-            <span class="cheese-type">Hard</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'blue.webp' %>" />
-        <div class="cheese-details">
-            <h2>Blue</h2>
-            <p>A bold, tangy cheese with blue veins of mold, known for its strong aroma.</p>
-            <span class="cheese-type">Blue</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'bocconcini.webp' %>" />
-        <div class="cheese-details">
-            <h2>Bocconcini</h2>
-            <p>Small, semi-soft mozzarella balls, delicate and perfect for salads.</p>
-            <span class="cheese-type">Semi-Soft</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'brie.webp' %>" />
-        <div class="cheese-details">
-            <h2>Brie</h2>
-            <p>A soft French cheese with a creamy interior and edible white rind.</p>
-            <span class="cheese-type">Soft</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'burrata.webp' %>" />
-        <div class="cheese-details">
-            <h2>Burrata</h2>
-            <p>A fresh Italian cheese with a soft mozzarella shell and creamy center.</p>
-            <span class="cheese-type">Fresh</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'camembert.webp' %>" />
-        <div class="cheese-details">
-            <h2>Camembert</h2>
-            <p>A rich, soft French cheese with a bloomy rind and earthy flavor.</p>
-            <span class="cheese-type">Soft</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'cheddar.webp' %>" />
-        <div class="cheese-details">
-            <h2>Cheddar</h2>
-            <p>A popular English cheese, firm in texture with a sharp, tangy taste.</p>
-            <span class="cheese-type">Hard</span>
-        </div>
-    </li>
-    <li>
-        <img class="cheese-image" src="<%= asset_path 'colby.webp' %>" />
-        <div class="cheese-details">
-            <h2>Colby</h2>
-            <p>A mild, moist American cheese similar to cheddar but softer and less tangy.</p>
-            <span class="cheese-type">Semi-Hard</span>
-        </div>
-    </li>
-        <li>
-            <img class="cheese-image" src="<%= asset_path 'parmesan.webp' %>" />
-            <div class="cheese-details">
-                <h2>Parmesan</h2>
-                <p>A hard, granular Italian cheese known for its rich, savory flavor, often grated over pasta.</p>
-                <span class="cheese-type">Hard</span>
-            </div>
-        </li>
-        <li>
-            <img class="cheese-image" src="<%= asset_path 'gouda.webp' %>" />
-            <div class="cheese-details">
-                <h2>Gouda</h2>
-                <p>A Dutch cheese with a smooth texture and sweet, creamy taste that intensifies with age.</p>
-                <span class="cheese-type">Semi-Hard</span>
-            </div>
-        </li>
-        <li>
-            <img class="cheese-image" src="<%= asset_path 'goat.webp' %>" />
-            <div class="cheese-details">
-                <h2>Goat Cheese</h2>
-                <p>A tangy, creamy cheese made from goat's milk, often enjoyed fresh or aged.</p>
-                <span class="cheese-type">Fresh</span>
-            </div>
-        </li>
-  </ul>
+    <ul>
+        <% @cheeses.each do |cheese| %>
+            <li>
+                <img class="cheese-image" src="<%= asset_path "#{cheese.name.parameterize}.webp" %>" />
+                <div class="cheese-details">
+                    <h2><%= cheese.name %></h2>
+                    <p><%= cheese.description %></p>
+                    <span class="cheese-type"><%= cheese.category %></span>
+                </div>
+            </li>
+        <% end %>
+    </ul>
 </div>
