@@ -399,10 +399,29 @@ button {
     width: 75%;
 
     .category {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0;
       color: white;
-      font-size: 3rem;
       font-style: italic;
       border-bottom: 15px dotted #860000;
+    }
+
+    .category-title {
+      padding: 0;
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    .category-description {
+      max-width: 75ch;
+      padding: 0;
+      margin: 0 0 1rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
     }
   }
 }
