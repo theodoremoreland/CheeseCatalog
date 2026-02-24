@@ -8,10 +8,6 @@
   width: 100%;
   height: 100%;
   padding: 1% 0 5% 0;
-  background-image: url("/stars.webp");
-  background-repeat: no-repeat;
-  background-position: 100% 6%;
-  background-attachment: fixed;
 
   h1 {
     width: 75%;
@@ -52,9 +48,6 @@
     width: 100%;
     padding: 12px;
     background-color: rgba(174, 0, 0, 0.3);
-    backdrop-filter: blur(
-      9px
-    ); /* Apply blur to the background behind the element */
     border: 2px dashed rgba(0, 0, 0, 0.788);
     border-radius: 6px;
 
