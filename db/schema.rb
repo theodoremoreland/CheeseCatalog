@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_24_071837) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_24_072000) do
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "cheeses", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_cheeses_on_category_id"
   end
 
   create_table "cheeses_menus", id: false, force: :cascade do |t|
@@ -31,4 +39,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_24_071837) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "cheeses", "categories"
 end

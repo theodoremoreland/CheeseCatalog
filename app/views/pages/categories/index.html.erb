@@ -5,33 +5,11 @@
 <div id="categories-page">
     <h1>Categories</h1>
     <ul id="categories-list">
+        <% @categories.sort_by(&:name).each do |category| %>
         <li class="category">
-            <h2 class="category-title">Soft</h2>
-            <p class="category-description">A soft cheese is a cheese that has a high moisture content and a soft texture. Examples include Brie and Camembert.</p>
+            <h2 class="category-title"><%= category.name %></h2>
+            <p class="category-description"><%= category.description %></p>
         </li>
-        <li class="category">
-            <h2 class="category-title">Hard</h2>
-            <p class="category-description">A hard cheese is a cheese that has a low moisture content and a firm texture. Examples include Cheddar and Parmesan.</p>
-        </li>
-        <li class="category">
-            <h2 class="category-title">Blue</h2>
-            <p class="category-description">Blue cheese is a type of cheese that has been inoculated with mold cultures, giving it a distinct blue or green marbling. Examples include Roquefort and Gorgonzola.</p>
-        </li>
-        <li class="category">
-            <h2 class="category-title">Processed</h2>
-            <p class="category-description">Processed cheese is a cheese product made from a blend of natural cheeses and other ingredients, often used for its melting properties. Examples include American cheese and cheese spreads.</p>
-        </li>
-        <li class="category">
-            <h2 class="category-title">Fresh</h2>
-            <p class="category-description">Fresh cheese is a cheese that has not been aged or matured. It has a mild flavor and a creamy texture. Examples include Ricotta and Mascarpone.</p>
-        </li>
-        <li class="category">
-            <h2 class="category-title">Semi-Soft</h2>
-            <p class="category-description">Semi-Soft cheese is a cheese that has a smooth and creamy texture, but is firmer than fresh cheese. Examples include Havarti and Munster.</p>
-        </li>
-        <li class="category">
-            <h2 class="category-title">Semi-Hard</h2>
-            <p class="category-description">Semi-Hard cheese is a cheese that has a firmer texture than semi-soft cheese, but is not as hard as aged cheese. Examples include Gouda and Edam.</p>
-        </li>
+        <% end %>
     </ul>
 </div>
