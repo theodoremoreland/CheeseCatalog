@@ -28,6 +28,13 @@ _This application was for an assignment at LaunchCode's Lc101 2018 (originally n
 
 This application was originally an optional CRUD exercise for LaunchCode's LC101 (2018). It was originally built using Java, Spring Boot, Thymeleaf, and MySQL. The end result was an app that allowed users to create, edit, and delete cheese items, cheese categories, and cheese menus. I have since then rewrote the application to learn Ruby and Ruby on Rails. Currently, I managed to redesign the UI and implement some foundations in Ruby and Ruby on Rails, which I consider sufficient for the purposes of learning.
 
+### Notes to self regarding features
+
+- Host recipes instead of menus.
+- Host pages dedicated to information regarding individual cheeses.
+- Provide option to see list of cheeses belonging to a given category in the categories page.
+- Cycle between facts in intro statement on homepage.
+
 ## How to run locally
 
 ### Ubuntu
